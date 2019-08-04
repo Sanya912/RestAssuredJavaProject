@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="basic6Jira1">
+      <class name="apiAutomation.basic4">
         <methods>
-          <include name="jiraAPI"/>
           <include name="getData"/>
+          <include name="postData"/>
         </methods>
-      </class> <!-- basic6Jira1 -->
+      </class> <!-- apiAutomation.basic4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

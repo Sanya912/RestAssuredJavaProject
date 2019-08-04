@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="apiAutomation.basic6Jira1"/> 
+      <class name="apiAutomation.excelDriven"/>
+      <class name="apiAutomation.Main"/>
+      
+            <!-- <class name="apiAutomation.base3"/>
+              <class name="apiAutomation.staticJson"/>
+            <class name="apiAutomation.basic5"/>
+             <class name="apiAutomation.basic4"/>
+      <class name="apiAutomation.basic2"/> -->
+            
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

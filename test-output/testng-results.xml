@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1985" started-at="2019-08-04T17:39:18Z" finished-at="2019-08-04T17:39:20Z">
+  <suite name="Suite" duration-ms="4903" started-at="2019-08-04T18:43:02Z" finished-at="2019-08-04T18:43:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1985" started-at="2019-08-04T17:39:18Z" finished-at="2019-08-04T17:39:20Z">
-      <class name="basic6Jira1">
-        <test-method status="PASS" signature="getData()[pri:0, instance:basic6Jira1@71318ec4]" name="getData" is-config="true" duration-ms="10" started-at="2019-08-04T17:39:18Z" finished-at="2019-08-04T17:39:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getData -->
-        <test-method status="PASS" signature="jiraAPI()[pri:0, instance:basic6Jira1@71318ec4]" name="jiraAPI" duration-ms="1954" started-at="2019-08-04T17:39:18Z" finished-at="2019-08-04T17:39:20Z">
+    <test name="Test" duration-ms="4903" started-at="2019-08-04T18:43:02Z" finished-at="2019-08-04T18:43:07Z">
+      <class name="apiAutomation.basic6Jira1">
+        <test-method status="PASS" signature="jiraAPI()[pri:0, instance:apiAutomation.basic6Jira1@52a86356]" name="jiraAPI" duration-ms="1929" started-at="2019-08-04T18:43:02Z" finished-at="2019-08-04T18:43:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jiraAPI -->
-      </class> <!-- basic6Jira1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="jiraAPI1()[pri:0, instance:apiAutomation.basic6Jira1@52a86356]" name="jiraAPI1" duration-ms="118" started-at="2019-08-04T18:43:04Z" finished-at="2019-08-04T18:43:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jiraAPI1 -->
+      </class> <!-- apiAutomation.basic6Jira1 -->
+      <class name="apiAutomation.Main">
+        <test-method status="PASS" signature="getData()[pri:0, instance:apiAutomation.Main@5ce81285]" name="getData" is-config="true" duration-ms="9" started-at="2019-08-04T18:43:02Z" finished-at="2019-08-04T18:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="getData()[pri:0, instance:apiAutomation.basic6Jira1@52a86356]" name="getData" is-config="true" duration-ms="1" started-at="2019-08-04T18:43:02Z" finished-at="2019-08-04T18:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="test()[pri:0, instance:apiAutomation.Main@5ce81285]" name="test" duration-ms="407" started-at="2019-08-04T18:43:04Z" finished-at="2019-08-04T18:43:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- apiAutomation.Main -->
+      <class name="apiAutomation.excelDriven">
+        <test-method status="PASS" signature="addBook()[pri:1, instance:apiAutomation.excelDriven@78c03f1f]" name="addBook" duration-ms="636" started-at="2019-08-04T18:43:05Z" finished-at="2019-08-04T18:43:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.Integer)[pri:2, instance:apiAutomation.excelDriven@78c03f1f]" name="addBook" duration-ms="581" started-at="2019-08-04T18:43:05Z" data-provider="BooksData" finished-at="2019-08-04T18:43:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Leo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11155]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.Integer)[pri:2, instance:apiAutomation.excelDriven@78c03f1f]" name="addBook" duration-ms="612" started-at="2019-08-04T18:43:06Z" data-provider="BooksData" finished-at="2019-08-04T18:43:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aleks5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8440]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.Integer)[pri:2, instance:apiAutomation.excelDriven@78c03f1f]" name="addBook" duration-ms="584" started-at="2019-08-04T18:43:06Z" data-provider="BooksData" finished-at="2019-08-04T18:43:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Alik]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6141]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- apiAutomation.excelDriven -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="apiAutomation.Main">
+        <methods>
+          <include name="getData"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- apiAutomation.Main -->
+      <class name="apiAutomation.staticJson">
+        <methods>
+          <include name="addBook"/>
+        </methods>
+      </class> <!-- apiAutomation.staticJson -->
+      <class name="apiAutomation.basic5">
+        <methods>
+          <include name="test"/>
+          <include name="getData"/>
+        </methods>
+      </class> <!-- apiAutomation.basic5 -->
+      <class name="apiAutomation.basic2">
+        <methods>
+          <include name="postData"/>
+        </methods>
+      </class> <!-- apiAutomation.basic2 -->
+      <class name="apiAutomation.basic4">
+        <methods>
+          <include name="getData"/>
+          <include name="test"/>
+          <include name="postData"/>
+        </methods>
+      </class> <!-- apiAutomation.basic4 -->
+      <class name="apiAutomation.excelDriven">
+        <methods>
+          <include name="addBook"/>
+          <include name="addBook" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- apiAutomation.excelDriven -->
+      <class name="apiAutomation.base3">
+        <methods>
+          <include name="AddAndDelete"/>
+        </methods>
+      </class> <!-- apiAutomation.base3 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,3 +1,4 @@
+package apiAutomation;
 import files.ReusableMethods;
 import files.payLoad;
 import io.restassured.RestAssured;
@@ -27,6 +28,21 @@ public class basic6Jira1 {
 	
 	@Test
 	public static void jiraAPI(){
+
+		RestAssured.baseURI = "http://localhost:8088";
+		Response res = 
+				given().header("Content-Type", "application/json").
+				header("Cookie", "JSESSIONID=" + ReusableMethods.getSessionKey()).
+				body(payLoad.postJiraBug("First Summary", "Here my big description")).log().all().
+				when().post("/rest/api/2/issue/").then().assertThat().statusCode(201).extract().response();
+		
+		JsonPath js = ReusableMethods.rawToJson(res);
+		String id = js.get("id");
+		System.out.println(id);
+	}
+	
+	@Test
+	public static void jiraAPI1(){
 
 		RestAssured.baseURI = "http://localhost:8088";
 		Response res = 

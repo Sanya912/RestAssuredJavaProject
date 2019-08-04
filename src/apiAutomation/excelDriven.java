@@ -1,3 +1,4 @@
+package apiAutomation;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -16,11 +17,37 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class staticJson {
+public class excelDriven {
 	
 	//method reading xml 
 	public static String GenerateStringFromResource(String path) throws IOException {
 		return new String(Files.readAllBytes(Paths.get(path)));
+	}
+	public static int numbs(){
+		return (int)(Math.random()*99999);
+	}
+	
+	@Test(priority = 2,dataProvider="BooksData") // added dataProvider and parameters
+	public void addBook(String name, Integer num) throws IOException{
+		
+		RestAssured.baseURI = "http://216.10.245.166";  
+		Response resp = given().header("Content-Type", "application/json").
+		body(payLoad.Addbook(name, num)).log().all().
+	when().post("/Library/Addbook.php").
+	then().assertThat().statusCode(200).
+	extract().response();
+
+		
+		JsonPath js = ReusableMethods.rawToJson(resp);
+		String id = js.get("ID");
+		System.out.println(id);
+	}
+	
+	@DataProvider(name="BooksData")
+	public Object[][] getDataExcel(){
+		//multidenmentionArray = collection of arrays
+		return new Object[][]{ {"Leo", numbs()}, {"Aleks5", numbs()}, {"Alik", numbs()} };
+		 
 	}
 	
 	@Test(priority = 1) // added dataProvider and parameters
@@ -28,8 +55,7 @@ public class staticJson {
 		
 		RestAssured.baseURI = "http://216.10.245.166";  
 		Response resp = given().header("Content-Type", "application/json").
-				//need to change pages or name in the file. Numbers should be unique
-		body(GenerateStringFromResource("C:\\Users\\omelik079\\Desktop\\Automation\\APIAutomation\\testAPIfiles\\jsonTest.json")).log().all().
+		body(payLoad.Addbook("Alek", (int)(Math.random()*99999))).log().all().
 	when().post("/Library/Addbook.php").
 	then().assertThat().statusCode(200).
 	extract().response();
