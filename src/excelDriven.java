@@ -45,7 +45,7 @@ public class excelDriven {
 	@DataProvider(name="BooksData")
 	public Object[][] getDataExcel(){
 		//multidenmentionArray = collection of arrays
-		return new Object[][]{ {"def", numbs()}, {"Aleks5", numbs()}, {"Alik", numbs()} };
+		return new Object[][]{ {"Leo", numbs()}, {"Aleks5", numbs()}, {"Alik", numbs()} };
 		 
 	}
 	

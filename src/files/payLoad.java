@@ -2,7 +2,42 @@ package files;
 
 public class payLoad {
 
-	
+	//metod in line
+	public static String postJiraBug(String description, String summary){
+		return "{\"fields\":{\"project\":{\"key\":\"MEL\"},\"summary\":\"" + summary + "\",\"description\":\""+ description + "\",\"issuetype\":{\"name\":\"Bug\"}}}";
+		
+	}
+	//The same method in lines
+
+	public static String postJiraBug2(String sum, String desc){
+		return "{"+
+			    "\"fields\": {" +
+			      " \"project\":"+
+			       "{"+
+			       "   \"key\": \"MEL\""+
+			       "},"+
+			       "\"summary\": \"" + sum +"\","+
+			       "\"description\": \""+desc+"\","+
+			       "\"issuetype\": {"+
+			         " \"name\": \"Bug\""+
+			       "}"+
+			   "}}";
+		
+		
+/*		 "{"+
+		    "\"fields\": {" +
+		      " \"project\":"+
+		       "{"+
+		       "   \"key\": \"MEL\""+
+		       "},"+
+		       "\"summary\": \"Defect is here\","+
+		       "\"description\": \"BUUUUUUUUUUUUUUUUUUUGGG\","+
+		       "\"issuetype\": {"+
+		         " \"name\": \"Bug\""+
+		       "}"+
+		   "}}";*/
+			       
+	}
 	public static String getPostData(){
 		String b = "{"+
 
